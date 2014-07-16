@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,target-densitydpi=160,minimal-ui" name="viewport">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="keywords" content="event, google, i/o, programming, android, chrome, developers, moscone, san francisco">
+    <meta property="og:title" content="Google I/O 2014">
+    <meta property="og:description" content="Google I/O 2014's web experiment explores several breakthroughs in science and technology. We're inspired by the power of science and technology that allows us to unlock discoveries in the universe as well as the everyday. Join us for Google I/O 2014 as we talk about our latest innovations in platforms, apps and APIs for developers.">
+    <meta property="og:image" content="https://www.google.com/events/io/images/io.png">
+    <title>Google I/O 2014 - Experiment</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
+    <link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet">
+    <link href="/css/experiment.css" rel="stylesheet">
+    <script src="/js/vendor/modernizr/modernizr.js"></script>
+  </head>
+  <body class="firstrun">
+    <div class="experiment__fallback js-fallback js-remove-hidden" style="display: none;">
+      <div class="fallback__content">
+        Sorry for the tech trouble. This is an experiment and was built with Google Chrome in mind. Please <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">download it</a> and give it another try.
+      </div>
+    </div>
+
+    <div class="more-info js-remove-hidden" style="display: none;">
+      <div class="wrapper">
+        <div class="sidebar__close js-close-sidebar"></div>
+        <div class="info-content">
+          <h6>What it is</h6>
+          <p>This year's Google I/O web experiment explores several breakthroughs in science and technology. We're inspired by the power of science and technology that allows us to unlock discoveries in the universe as well as the everyday. Join us for Google I/O 2014 as we talk about our latest innovations in platforms, apps and APIs for developers.</p>
+
+          <h6>How to use it</h6>
+          <p>Tap it. Spin it. Swipe it. Click it. Unlock each chapter to arrive at the next.</p>
+
+          <h6>How it was built</h6>
+          <p>The experiment was built only using CSS 3D rather than WebGL so it could run on modern browsers and devices. We used SVG vector graphics so we could scale infinitely and have high fidelity images. Web Audio API brings audio input and output to the experience, while an accelerometer provides physical input.</p>
+        </div>
+      </div>
+    </div>
+
+    <canvas id="background"></canvas>
+    <!-- <div id="stats"></div> -->
+    <svg version="1.1" id="logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="48px" height="40px" viewBox="0 0 48 40" enable-background="new 0 0 48 40" xml:space="preserve">
+      <g>
+        <rect class="change" fill="#DBDBDB" x="17.176" y="2.604" transform="matrix(0.9744 0.2249 -0.2249 0.9744 4.961 -3.544)" fill-rule="evenodd" clip-rule="evenodd" width="1.715" height="34.791"/>
+        <rect class="change" fill="#DBDBDB" y="8" fill-rule="evenodd" clip-rule="evenodd" width="11.999" height="23.999"/>
+        <circle class="change" fill="#DBDBDB" cx="34.285" cy="20" r="12.857"/>
+      </g>
+    </svg>
+
+    <div id="volume">
+      <svg version="1.1" id="volume-on" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <symbol id="ic_x5F_volumeUp_1_" viewBox="0 -24 24 24">
+          <path d="M3-9c0,0.004,0-6,0-6h4l5-5v16L7-9H3z M16.5-12c0,1.766-1.02,3.29-2.5,4.027v-8.055C15.48-15.29,16.5-13.766,16.5-12z
+             M14-3.23v-2.063c2.891-0.86,5-3.536,5-6.706s-2.109-5.846-5-6.706v-2.063c4.007,0.911,7,4.487,7,8.77S18.007-4.141,14-3.23z"/>
+          <polygon fill="none" points="24,-24 0,-24 0,0 24,0  "/>
+        </symbol>
+        <use xlink:href="#ic_x5F_volumeUp_1_"  width="24" height="24" id="XMLID_89_" y="-24" transform="matrix(1 0 0 -1 520 1008)" overflow="visible"/>
+        <g id="ic_x5F_volumeUp">
+          <path class="change" fill="#DBDBDB" d="M3,9c0-0.004,0,6,0,6h4l5,5V4L7,9H3z M16.5,12c0-1.766-1.02-3.29-2.5-4.027v8.055C15.48,15.29,16.5,13.766,16.5,12z
+             M14,3.23v2.063c2.891,0.86,5,3.536,5,6.706s-2.109,5.846-5,6.706v2.063c4.007-0.911,7-4.487,7-8.77S18.007,4.141,14,3.23z"/>
+          <rect fill="none" width="24" height="24"/>
+        </g>
+      </svg>
+      <svg version="1.1" id="volume-off" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+   width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+      <g id="ic_x5F_volumeUp">
+      </g>
+        <path class="change" fill="#DBDBDB" d="M16.5,12c0-1.766-1.02-3.29-2.5-4.027v2.209l2.454,2.454C16.484,12.428,16.5,12.216,16.5,12z M19,12
+        c0,0.939-0.203,1.824-0.539,2.643l1.514,1.514C20.625,14.912,21,13.502,21,12c0-4.282-2.993-7.859-7-8.77v2.063
+        C16.891,6.154,19,8.83,19,12z M4.273,3L3,4.273L7.727,9H3c0-0.004,0,6,0,6h4l5,5v-6.727l4.255,4.254
+        c-0.669,0.518-1.423,0.931-2.255,1.178v2.064c1.377-0.313,2.629-0.947,3.686-1.812L19.727,21L21,19.727l-9-9L4.273,3z M12,4
+        L9.909,6.091L12,8.182V4z"/>
+      </svg>
+    </div>
+
+    <a href="https://www.google.com/events/io" id="continue" class="experiment__pause js-pause-experiment">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+        <symbol  id="ic_x5F_arrowForward_x0D__2" viewBox="0 -24 24 24">
+          <polygon fill="none" points="0,0 0,-24 24,-24 24,0  "/>
+          <polygon points="12,-4 10.586,-5.414 16.172,-11 4,-11 4,-13 16.172,-13 10.586,-18.586 12,-20 20,-12   "/>
+        </symbol>
+        <use xlink:href="#ic_x5F_arrowForward_x0D__2"  width="24" height="24" id="arrowPath" y="-24" transform="matrix(0 1 1 0 24 0)" fill="black" overflow="visible"/>
+      </svg>
+      Continue to site
+    </a>
+
+    <div id="radius" class="-desktop"></div>
+    <div id="desktopstart" class="play-button js-start-experiment -desktop" style="opacity: 0;"></div>
+
+    <div class="chapters js-toggle-item js-chapters-ui js-remove-hidden" style="display: none;">
+
+      <div class="chapters__chapter hidden-chapter -intro -white js-chapter">
+        <div class="chapter__controls">
+          <div class="chapter__more js-chapter-more"></div>
+        </div>
+        <div class="chapter__description">
+          Explore technology and its impact from small to large through tapping and spinning.
+        </div>
+        <div class="play-button js-start-experiment"></div>
+      </div>
+
+      <div class="chapters__chapter hidden-chapter -boson js-chapter">
+        <div class="chapter__controls">
+          <div class="chapter__close js-toggle-close"></div>
+        </div>
+
+        <div class="chapter__title">
+          <h5>Higgs Boson <div class="chapter__icon"></div></h5>
+        </div>
+
+        <div class="chapter__description">
+          Gather these elusive subatomic particles thought to be a fundamental building block of the universe.
+        </div>
+
+        <div class="chapter__scale-wrapper">
+          <div class="chapter__scale">
+            <div class="chapter__scale-active chapter__scale-boson-active"></div>
+            <div class="chapter__scale-name">Picometers</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapters__chapter hidden-chapter -silicon js-chapter">
+        <div class="chapter__controls">
+          <div class="chapter__close js-toggle-close"></div>
+        </div>
+
+        <div class="chapter__title">
+          <h5>Silicon <div class="chapter__icon"></div></h5>
+        </div>
+
+        <div class="chapter__description">
+          Build up the atoms to create a full crystalline structure of this highly-abundant element that makes modern computing possible.
+        </div>
+
+        <div class="chapter__scale-wrapper">
+          <div class="chapter__scale">
+            <div class="chapter__scale-active chapter__scale-boson-active"></div>
+            <div class="chapter__scale-active chapter__scale-silicon-active"></div>
+            <div class="chapter__scale-name">Angstroms</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapters__chapter hidden-chapter -neural js-chapter">
+        <div class="chapter__controls">
+          <div class="chapter__close js-toggle-close"></div>
+        </div>
+
+        <div class="chapter__title">
+          <h5>Neural Network <div class="chapter__icon"></div></h5>
+        </div>
+
+        <div class="chapter__description">
+          Add raw data to see what this network&rsquo;s processors&mdash;capable of complex learning and pattern recognition&mdash;can come up with.
+        </div>
+
+        <div class="chapter__scale-wrapper">
+          <div class="chapter__scale">
+            <div class="chapter__scale-active chapter__scale-boson-active"></div>
+            <div class="chapter__scale-active chapter__scale-silicon-active"></div>
+            <div class="chapter__scale-active chapter__scale-neural-active"></div>
+            <div class="chapter__scale-name">Nanometers</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapters__chapter hidden-chapter -planet js-chapter">
+        <div class="chapter__controls">
+          <div class="chapter__close js-toggle-close"></div>
+        </div>
+
+        <div class="chapter__title">
+          <h5>Connected World <div class="chapter__icon"></div></h5>
+        </div>
+
+        <div class="chapter__description">
+          Tap the Earth to see how we connect with one another to share ideas instantly.
+        </div>
+
+        <div class="chapter__scale-wrapper">
+          <div class="chapter__scale">
+            <div class="chapter__scale-active chapter__scale-boson-active"></div>
+            <div class="chapter__scale-active chapter__scale-silicon-active"></div>
+            <div class="chapter__scale-active chapter__scale-neural-active"></div>
+            <div class="chapter__scale-active chapter__scale-planet-active"></div>
+            <div class="chapter__scale-name">Kilometers</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="chapters__chapter hidden-chapter -exoplanet js-chapter">
+        <div class="chapter__controls">
+          <div class="chapter__close js-toggle-close"></div>
+        </div>
+
+        <div class="chapter__title">
+          <h5>Exoplanets <div class="chapter__icon"></div></h5>
+        </div>
+
+        <div class="chapter__description">
+          Tour the galaxy to discover planets far outside of our own solar system.
+        </div>
+
+        <div class="chapter__scale-wrapper">
+          <div class="chapter__scale">
+            <div class="chapter__scale-active chapter__scale-boson-active"></div>
+            <div class="chapter__scale-active chapter__scale-silicon-active"></div>
+            <div class="chapter__scale-active chapter__scale-neural-active"></div>
+            <div class="chapter__scale-active chapter__scale-planet-active"></div>
+            <div class="chapter__scale-active chapter__scale-exoplanet-active"></div>
+            <div class="chapter__scale-name">Light years</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/libs.min.js"></script>
+    <script src="/js/experiment.min.js"></script>
+    <script>
+      exp.init((window.self !== window.top));
+    </script>
+  </body>
+</html>

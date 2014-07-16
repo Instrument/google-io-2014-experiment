@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<circle fill="#F1F2F2" cx="50" cy="50" r="50"/>
+<g>
+	<g opacity="0.1">
+		<polygon fill="#6D0000" points="77.377,27.935 67.301,39.048 38.023,39.048 27.377,27.935 27.377,70.219 52.861,77.935 
+			77.377,70.219 		"/>
+	</g>
+	<g>
+		<polygon class="color-choice-3" fill="#ff0000" points="75.377,25.935 65.301,37.048 36.023,37.048 25.377,25.935 25.377,68.219 50.861,75.935 
+			75.377,68.219 		"/>
+	</g>
+</g>
+<g>
+	<g opacity="0.15">
+		<polygon fill="#727373" points="57.742,59.61 51.259,67.493 44.775,59.61 		"/>
+	</g>
+	<g>
+		<polygon class="color-choice-2" fill="#F1F2F2" points="56.985,58.854 50.502,66.736 44.018,58.854 		"/>
+	</g>
+</g>
+<ellipse fill="#FFFFFF" cx="40.646" cy="51.93" rx="4.074" ry="3.968"/>
+<path fill="#333333" d="M42.118,51.93c0,1.865-1.472,3.38-1.472,3.38s-1.472-1.515-1.472-3.38c0-1.869,1.472-3.383,1.472-3.383
+	S42.118,50.061,42.118,51.93z"/>
+<ellipse fill="#FFFFFF" cx="61.017" cy="51.93" rx="4.074" ry="3.968"/>
+<path fill="#333333" d="M62.489,51.93c0,1.865-1.472,3.38-1.472,3.38s-1.472-1.515-1.472-3.38c0-1.869,1.472-3.383,1.472-3.383
+	S62.489,50.061,62.489,51.93z"/>
+<g>
+	<polygon class="color-choice-1" fill="#17FFFF" points="56.661,36.88 50.379,56.826 44.096,36.88 	"/>
+	<polygon class="color-choice-1" fill="#17FFFF" points="43.986,36.88 40.619,45.754 37.25,36.88 	"/>
+	<polygon class="color-choice-1" fill="#17FFFF" points="64.013,36.88 60.645,45.754 57.276,36.88 	"/>
+	<polygon class="color-choice-1" fill="#17FFFF" points="27.073,37.233 27.073,30.689 33.663,37.356 	"/>
+	<polygon class="color-choice-1" fill="#17FFFF" points="73.714,37.233 73.714,30.689 67.123,37.356 	"/>
+	<g>
+		<g opacity="0.15">
+			<rect x="32.145" y="63.705" fill="#008080" width="13.694" height="0.607"/>
+		</g>
+		<g>
+			<rect x="31.388" y="62.948" class="color-choice-1" fill="#17FFFF" width="13.694" height="0.607"/>
+		</g>
+	</g>
+	<g>
+		<g opacity="0.15">
+			<polygon fill="#008080" points="45.735,61.902 32.387,58.922 32.247,59.513 45.597,62.494 			"/>
+		</g>
+		<g>
+			<polygon class="color-choice-1" fill="#17FFFF" points="44.979,61.146 31.63,58.165 31.49,58.756 44.84,61.737 			"/>
+		</g>
+	</g>
+	<g>
+		<g opacity="0.15">
+			<polygon fill="#008080" points="45.735,66.083 32.387,69.062 32.247,68.472 45.597,65.492 			"/>
+		</g>
+		<g>
+			<polygon class="color-choice-1" fill="#17FFFF" points="44.979,65.326 31.63,68.306 31.49,67.715 44.84,64.735 			"/>
+		</g>
+	</g>
+	<g>
+		<g opacity="0.15">
+			<rect x="56.488" y="63.705" fill="#008080" width="13.694" height="0.607"/>
+		</g>
+		<g>
+			<rect x="55.731" y="62.948" class="color-choice-1" fill="#17FFFF" width="13.694" height="0.607"/>
+		</g>
+	</g>
+	<g>
+		<g opacity="0.15">
+			<polygon fill="#008080" points="56.592,61.902 69.94,58.922 70.08,59.513 56.73,62.494 			"/>
+		</g>
+		<g>
+			<polygon class="color-choice-1" fill="#17FFFF" points="55.835,61.146 69.184,58.165 69.323,58.756 55.974,61.737 			"/>
+		</g>
+	</g>
+	<g>
+		<g opacity=".15">
+			<polygon fill="#008080" points="56.592,66.083 69.94,69.062 70.08,68.472 56.73,65.492 			"/>
+		</g>
+		<g>
+			<polygon class="color-choice-1" fill="#17FFFF" points="55.835,65.326 69.184,68.306 69.323,67.715 55.974,64.735 			"/>
+		</g>
+	</g>
+</g>
+</svg>

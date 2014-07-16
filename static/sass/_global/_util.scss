@@ -1,0 +1,617 @@
+////////////////////////////////////////////////////////////////////////////////
+// Mixins
+////////////////////////////////////////////////////////////////////////////////
+
+// hoverable
+@mixin hover() {
+  .hoverable &:hover {
+    @content;
+  }
+}
+
+@mixin font-size-from-base($px) {
+  font-size: ($px / $base-font) + 0em;
+}
+
+// Placeholder styles for wrapper within ratio element
+%flex-ratio-container {
+  position: relative;
+  height: 0; // IE fix
+}
+
+// Placeholder styles for actual content within wrapper
+%flex-ratio-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+}
+
+// Flexible ratios. Width should be set on parent.
+// @param $rw int Ratio width component
+// @param $rh int Ratio height component
+// @param $wrapper-class string Desired wrapper class name
+// @param $content-class string Desired content class name
+@mixin flex-ratio($rw, $rh, $wrapper-class:"wrapper", $content-class:"content") {
+  .#{$wrapper-class} {
+    @extend %flex-ratio-container;
+    padding-bottom: ($rh / $rw) * 100%;
+
+    .#{$content-class} {
+      @extend %flex-ratio-content;
+    }
+  }
+}
+
+// keyframes mixin
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-ms-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+
+// animation mixin
+@mixin animation($value) {
+  -webkit-animation: #{$value};
+  -moz-animation: #{$value};
+  -o-animation: #{$value};
+  animation: #{$value};
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Media queries
+////////////////////////////////////////////////////////////////////////////////
+@mixin retina() {
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3/2), (min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}
+
+@mixin landscape() {
+  @media #{$landscape} {
+    @content;
+  }
+}
+
+@mixin portrait() {
+  @media #{$portrait} {
+    @content;
+  }
+}
+
+@mixin small-up() {
+  @media #{$small-up} {
+    @content;
+  }
+}
+
+@mixin small-only() {
+  @media #{$small-only} {
+    @content;
+  }
+}
+
+@mixin small-and-nexus-only() {
+  .nexus-7 & {
+    @content;
+  }
+
+  @media #{$small-only} {
+    @content;
+  }
+}
+
+@mixin medium-up() {
+  @media #{$medium-up} {
+    @content;
+  }
+}
+
+@mixin medium-only() {
+  @media #{$medium-only} {
+    @content;
+  }
+}
+
+@mixin large-up() {
+  @media #{$large-up} {
+    @content;
+  }
+}
+
+@mixin large-only() {
+  @media #{$large-only} {
+    @content;
+  }
+}
+
+@mixin x-large-up() {
+  @media #{$x-large-up} {
+    @content;
+  }
+}
+
+// Layout specific
+@mixin phone() {
+  @media #{$phone} {
+    @content;
+  }
+}
+
+@mixin phablet() {
+  @media #{$phablet} {
+    @content;
+  }
+}
+
+@mixin tablet() {
+  @media #{$tablet} {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media #{$desktop} {
+    @content;
+  }
+}
+
+@mixin widescreen() {
+  @media #{$widescreen} {
+    @content;
+  }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Internal Utility
+////////////////////////////////////////////////////////////////////////////////
+
+%white-antialiased {
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+%clearfix {
+  &:after, &:before {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+%teal-gradient {
+  background-color: rgb(0,188,212);
+  @include filter-gradient(#00bcd4, #1ccfe6, horizontal);
+  @include background-image(linear-gradient(left top,  rgba(0,188,212,1) 0%,rgba(28,207,230,1) 100%));
+}
+
+%purple-gradient {
+  background-color: #673ab7;
+  @include filter-gradient(#673ab7, #7644cd, horizontal);
+  @include background-image(linear-gradient(left top, #673ab7 0%, #7644cd 100%));
+}
+
+%absolute-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// External Utilities & Global Modifiers
+////////////////////////////////////////////////////////////////////////////////
+
+.ellipsis {
+  display: block;
+  @include ellipsis;
+}
+
+.-actionable {
+  cursor: pointer;
+}
+
+.-block {
+  display: block;
+}
+
+@include phone {
+  .-mobile-block {
+    display: block;
+  }
+}
+
+// border-bottom modifier
+.-border-top {
+  border-top: 1px solid $darker-light-grey;
+}
+
+.-border-bottom {
+  border-bottom: 1px solid $darker-light-grey;
+}
+
+.-border-right {
+  border-right: 1px solid $darker-light-grey;
+}
+
+// Miscellaneous useful HTML classes
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.fluid-left-fixed-right {
+  @extend %clearfix;
+
+  &.-with-icon {
+    .fluid-left {
+      margin-right: 24px + ($gutter * 0.5);
+    }
+
+    .fixed-right {
+      float: left;
+      width: 24px;
+      margin-left: -24px;
+    }
+  }
+}
+
+.fixed-left-fluid-right {
+  @extend %clearfix;
+
+  &.-with-icon {
+    .fluid-right,
+    .fixed-left {
+      float: left;
+    }
+
+    .fluid-right {
+      padding-left: 46px;
+      width: 100%;
+
+      @include phone {
+        padding-left: 39px;
+      }
+    }
+
+    .fixed-left {
+      margin-left: -100%;
+      width: 46px;
+    }
+  }
+}
+
+.-mobile-no-icon {
+  .fixed-left-fluid-right.-with-icon .fluid-right {
+    @include phone {
+      padding-left: 0;
+    }
+  }
+}
+
+.clearfix {
+  @extend %clearfix;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.-fade {
+  opacity: 0;
+  @include transition(opacity 300ms ease-out 100ms);
+
+  &.loaded {
+    opacity: 1;
+  }
+}
+
+.v-align {
+  display: table;
+  height: 100%;
+
+  &.-whole {
+    width: 100%;
+  }
+}
+
+.v-align__element {
+  display: table-cell;
+
+  &.-bottom {
+    vertical-align: bottom;
+  }
+
+  &.-middle {
+    vertical-align: middle;
+  }
+
+  &.-top {
+    vertical-align: top;
+  }
+
+  &.-relative {
+    position: relative;
+  }
+}
+
+// Get rid of gap under images by making them display: inline-block; by default
+img {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+// Completely remove from the flow and screen readers.
+// .u-is-hidden {
+//   display: none !important;
+//   visibility: hidden !important;
+// }
+
+// Buffer point.
+.u-buffer-point {
+  @extend .u-is-hidden-visually;
+
+  &.-bottom {
+    bottom: -50px;
+  }
+
+  &.-middle {
+    top: 50%;
+  }
+}
+
+// Completely remove from the flow but leave available to screen readers.
+.u-is-hidden-visually {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Control visibility without affecting flow.
+// .u-is-visible {
+//   visibility: visible !important;
+// }
+
+// .u-is-invisible {
+//   visibility: hidden !important;
+// }
+
+.show-for-small-only,
+// .show-for-small,
+// .show-for-small-only,
+// .show-for-medium-down,
+// .show-for-large-down,
+// .hide-for-medium,
+// .hide-for-medium-up,
+.hide-for-medium-only {
+// .hide-for-large {
+// .hide-for-large-up,
+// .hide-for-large-only {
+  display: inherit !important;
+
+  &.-inline {
+    display: inline !important;
+  }
+
+  &.hidden {
+    display: none !important;
+  }
+}
+
+.hide-for-small-only {
+// .hide-for-small,
+// .hide-for-small-only,
+// .hide-for-medium-down,
+// .show-for-medium,
+// .show-for-medium-up,
+// .show-for-medium-only,
+// .hide-for-large-down,
+// .show-for-large,
+// .show-for-large-up,
+// .show-for-large-only {
+  display: none !important;
+}
+
+@include medium-up {
+  .hide-for-small-only {
+  // .hide-for-small,
+  // .hide-for-small-only,
+  // .show-for-medium,
+  // .show-for-medium-down,
+  // .show-for-medium-up,
+  // .show-for-medium-only,
+  // .hide-for-large {
+  // .hide-for-large-up,
+  // .hide-for-large-only {
+    display: inherit !important;
+
+    &.-inline {
+      display: inline !important;
+    }
+
+    &.icon {
+      display: inline-block !important;
+    }
+
+    &.hidden {
+      display: none !important;
+    }
+  }
+
+  .show-for-small-only,
+  // .show-for-small,
+  // .show-for-small-only,
+  // .hide-for-medium,
+  // .hide-for-medium-down,
+  // .hide-for-medium-up,
+  .hide-for-medium-only {
+  // .hide-for-large-down,
+  // .show-for-large,
+  // .show-for-large-up,
+  // .show-for-large-only {
+    display: none !important;
+  }
+}
+
+@include large-up {
+  .hide-for-small-only,
+  // .hide-for-small,
+  // .hide-for-small-only,
+  // .hide-for-medium,
+  // .hide-for-medium-down,
+  .hide-for-medium-only {
+  // .show-for-medium-up,
+  // .show-for-large,
+  // .show-for-large-up,
+  // .show-for-large-only {
+    display: inherit !important;
+
+    &.-inline {
+      display: inline !important;
+    }
+
+    &.icon {
+      display: inline-block !important;
+    }
+
+    &.hidden {
+      display: none !important;
+    }
+  }
+
+  .show-for-small-only {
+  // .show-for-small-only,
+  // .show-for-medium,
+  // .show-for-medium-down,
+  // .show-for-medium-only,
+  // .hide-for-large {
+  // .hide-for-large-up,
+  // .hide-for-large-only {
+    display: none !important;
+  }
+}
+
+@include x-large-up {
+  // .hide-for-small-only {
+  // .hide-for-small,
+  // .hide-for-small-only,
+  // .hide-for-medium,
+  // .hide-for-medium-down,
+  .hide-for-medium-only {
+  // .show-for-medium-up,
+  // .show-for-large,
+  // .show-for-large-up,
+  // .show-for-large-only {
+    display: inherit !important;
+  }
+
+  // .show-for-small-only,
+  // .show-for-small-only,
+  // .show-for-medium,
+  // .show-for-medium-down,
+  // .show-for-medium-only,
+  .hide-for-x-large {
+  // .hide-for-large-up,
+  // .hide-for-large-only {
+    display: none !important;
+  }
+}
+
+.no-mediaqueries {
+  .show-for-small-only,
+  .hide-for-x-large {
+    display: none !important;
+  }
+
+  .hide-for-small-only {
+    display: inherit !important;
+
+    &.icon {
+      display: inline-block !important;
+    }
+  }
+}
+
+// @include landscape {
+//   .show-for-landscape,
+//   .hide-for-portrait {
+//     display: inherit !important;
+//   }
+
+//   .hide-for-landscape,
+//   .show-for-portrait {
+//     display: none !important;
+//   }
+// }
+
+// @include portrait {
+//   .show-for-portrait,
+//   .hide-for-landscape {
+//     display: inherit !important;
+//   }
+
+//   .hide-for-portrait,
+//   .show-for-landscape {
+//     display: none !important;
+//   }
+// }
+
+// .show-for-touch {
+//   display: none !important;
+// }
+// .hide-for-touch {
+//   display: inherit !important;
+// }
+
+// .touch .show-for-touch {
+//   display: inherit !important;
+// }
+// .touch .hide-for-touch {
+//   display: none !important;
+// }
+
+.initially-hidden {
+  opacity: 0;
+}
+
+.initially-none {
+  display: none;
+}
+
+.hidden {
+  display: none !important;
+}

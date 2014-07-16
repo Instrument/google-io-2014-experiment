@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<circle fill="#F1F2F2" cx="50" cy="50" r="50"/>
+<polygon fill="#263238" points="30.868,38.146 26.897,38.146 26.207,41.081 31.558,41.081 "/>
+<polygon fill="#546E7A" points="59.285,38.146 43.019,38.146 40.19,41.081 62.114,41.081 "/>
+<polygon fill="#263238" points="75.406,38.146 71.436,38.146 70.746,41.081 76.097,41.081 "/>
+<polygon fill="#263238" points="69.364,38.146 65.395,38.146 64.703,41.081 70.056,41.081 "/>
+<polygon fill="#CFD8DC" points="19.761,31.759 19.761,43.671 22.293,43.671 22.293,34.003 79.896,34.003 79.896,43.671 
+	82.428,43.671 82.428,31.759 "/>
+<rect x="19.761" y="40.391" fill="#CFD8DC" width="62.667" height="32.109"/>
+<polyline fill="none" stroke="#BCBEC0" stroke-width="2" stroke-miterlimit="10" points="17,22.437 17,45.225 19.761,45.225 "/>
+<g>
+	<g>
+		<g opacity="0.1">
+			<circle fill="#313F46" cx="35.953" cy="57.101" r="11.451"/>
+		</g>
+		<g>
+			<circle fill="#B0BEC5" cx="34.953" cy="56.101" r="11.451"/>
+		</g>
+	</g>
+	<g>
+		<g opacity="0.1">
+			<circle fill="#00111D" cx="35.954" cy="57.101" r="10.185"/>
+		</g>
+		<g>
+			<circle fill="#78909C" cx="34.954" cy="56.101" r="10.185"/>
+		</g>
+	</g>
+	<g>
+		<g opacity="0.1">
+			<circle cx="35.953" cy="57.101" r="3.856"/>
+		</g>
+		<g>
+			<circle fill="#455A64" cx="34.953" cy="56.101" r="3.856"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g>
+		<g opacity="0.1">
+			<circle fill="#313F46" cx="68.408" cy="57.101" r="11.451"/>
+		</g>
+		<g>
+			<circle fill="#B0BEC5" cx="67.408" cy="56.101" r="11.451"/>
+		</g>
+	</g>
+	<g>
+		<g opacity="0.1">
+			<circle fill="#00111D" cx="68.409" cy="57.101" r="10.185"/>
+		</g>
+		<g>
+			<circle fill="#78909C" cx="67.409" cy="56.101" r="10.185"/>
+		</g>
+	</g>
+	<g>
+		<g opacity="0.1">
+			<circle cx="68.466" cy="57.101" r="3.855"/>
+		</g>
+		<g>
+			<circle fill="#455A64" cx="67.466" cy="56.101" r="3.855"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g opacity="0.1">
+		<rect x="46.887" y="44.153" fill="#257080" width="10.703" height="3.625"/>
+	</g>
+	<g>
+		<rect x="45.887" y="43.153" fill="#A4EFFF" width="10.703" height="3.625"/>
+	</g>
+</g>
+<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="46.922" y1="44.966" x2="55.727" y2="44.966"/>
+<line fill="none" stroke="#E83975" stroke-miterlimit="10" x1="52.619" y1="46.088" x2="52.619" y2="43.844"/>
+</svg>

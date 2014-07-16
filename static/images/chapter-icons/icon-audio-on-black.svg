@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="24px" height="24px" viewBox="0 0 24 24" enable-background="new 0 0 24 24" xml:space="preserve">
+<symbol  id="ic_x5F_volumeUp_1_" viewBox="0 -24 24 24">
+	<path d="M3-9c0,0.004,0-6,0-6h4l5-5v16L7-9H3z M16.5-12c0,1.766-1.02,3.29-2.5,4.027v-8.055C15.48-15.29,16.5-13.766,16.5-12z
+		 M14-3.23v-2.063c2.891-0.86,5-3.536,5-6.706s-2.109-5.846-5-6.706v-2.063c4.007,0.911,7,4.487,7,8.77S18.007-4.141,14-3.23z"/>
+	<polygon fill="none" points="24,-24 0,-24 0,0 24,0 	"/>
+</symbol>
+<use xlink:href="#ic_x5F_volumeUp_1_"  width="24" height="24" id="XMLID_89_" y="-24" transform="matrix(1 0 0 -1 520 1008)" overflow="visible"/>
+<g id="ic_x5F_volumeUp">
+	<path d="M3,9c0-0.004,0,6,0,6h4l5,5V4L7,9H3z M16.5,12c0-1.766-1.02-3.29-2.5-4.027v8.055C15.48,15.29,16.5,13.766,16.5,12z
+		 M14,3.23v2.063c2.891,0.86,5,3.536,5,6.706s-2.109,5.846-5,6.706v2.063c4.007-0.911,7-4.487,7-8.77S18.007,4.141,14,3.23z"/>
+	<rect fill="none" width="24" height="24"/>
+</g>
+</svg>

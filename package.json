@@ -1,0 +1,25 @@
+{
+  "title": "Google IO 2014 Experiment",
+  "name": "google-io-2014-experiment",
+  "description": "Google I/O 2014 Experiment",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Instrument/google-io-2014-experiment.git"
+  },
+  "keywords": [],
+  "author": "Instrument",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-contrib-compass": "~0.2.0",
+    "grunt-contrib-concat": "~0.3.0",
+    "closure-linter-wrapper": "~0.2.9",
+    "grunt-gjslint": "~0.1.4",
+    "grunt-remove-logging": "0.2.0",
+    "grunt-shell": "~0.6.4"
+  }
+}

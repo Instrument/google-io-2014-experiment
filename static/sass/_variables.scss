@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+@import "compass";
+@import "compass/reset/utilities";
+@import "compass/css3/user-interface";
+
+$experimental-support-for-svg: true;
+$disable-magic-sprite-selectors: true;
+
+$base-font: 16px;
+$line-height: (24 / 16);
+
+$basement-width: 256px;
+
+// Grid
+$row-class: "row";
+$column-class: "col";
+$block-class: "block";
+
+$num-columns: 6;
+$row-width: 1440px;
+$gutter: 32px;
+$gutter-small: 20px;
+
+$grid-break: $row-width;
+$phone-break: 767px;
+
+// Lower and upper bounds for each media size
+$small-max: $phone-break;
+$medium-min: $phone-break + 1;
+$medium-max: 1024px;
+$large-min: $medium-max + 1;
+$large-max: $grid-break;
+$x-large: $large-max + 1;
+
+// Media Queries
+$screen: "only screen" !default;
+
+$landscape: "#{$screen} and (orientation:landscape)" !default;
+$portrait: "#{$screen} and (orientation:portrait)" !default;
+
+$small-up: $screen !default;
+$small-only: "#{$screen} and (max-width:#{$small-max})" !default;
+
+$medium-up: "#{$screen} and (min-width:#{$medium-min})" !default;
+$medium-only: "#{$screen} and (min-width:#{$medium-min}) and (max-width:#{$medium-max})" !default;
+
+$large-up: "#{$screen} and (min-width:#{$large-min})" !default;
+$large-only: "#{$screen} and (min-width:#{$large-min}) and (max-width:#{$large-max})" !default;
+
+$x-large-up: "#{$screen} and (min-width:#{$x-large})" !default;
+
+// Layout breakpoints
+$phone: "#{$screen} and (max-width:#{$small-max})" !default;
+$phablet: "#{$screen} and (min-width:530px) and (max-width:#{$small-max}) and (orientation:portrait)" !default;
+$tablet: "#{$screen} and (min-width:#{$medium-min})" !default;
+$desktop: "#{$screen} and (min-width:#{$medium-min}) and (max-width:#{$large-max})" !default;
+$widescreen: "#{$screen} and (min-width:#{$x-large})" !default;
+
+$blood-orange: #e91e62;
+$blue: #03a9f4;
+$pink: #EC1662;
+$darker-pink: #e3135d;
+$purple: #673ab7;
+$teal: #00bcd4;
+$dark-teal: #06aabf;
+$split-pea: #9ccb65;
+
+$font-red: #ff3b80;
+$font-purp: #3f51b5;
+$font-gold: #fee94e;
+$font-dark-green: #009688;
+$font-orange: #FFA733;
+$font-yellow: #ffff00;
+
+$cyan: #18ffff;
+$cobalt: #3f51b5;
+$light-grey: #fcfcfc;
+$darker-light-grey: #e7e7e7;
+$light-border-grey: #f8f8f8;
+
+// nav colors
+$nav-color-home: #ccc;
+$nav-color-sandbox: #ba184e;
+$nav-color-schedule: #522e92;
+$nav-color-io-extended: #2c383f;
+$nav-color-logistics: #0287c3;
+
+// nav item heights
+$logo-height: 35px;
+$menu-size: 24px;
+$menu-width: $menu-size + $gutter;

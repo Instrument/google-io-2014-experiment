@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="100px" height="100px" viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<circle fill="#F1F2F2" cx="50" cy="50" r="50"/>
+<path fill="#455A64" d="M82.583,67.847c0,0.486-0.395,0.88-0.88,0.88H18.547c-0.486,0-0.88-0.394-0.88-0.88V35.57
+	c0-0.484,0.395-0.88,0.88-0.88h63.156c0.485,0,0.88,0.396,0.88,0.88V67.847z"/>
+<rect x="20.398" y="37.352" fill="#D2D2D2" width="59.524" height="28.573"/>
+<rect x="38.006" y="36.229" fill="#455A64" width="24.309" height="3.473"/>
+<rect x="38.006" y="63.764" fill="#455A64" width="24.309" height="3.473"/>
+<g>
+	<g opacity="0.1">
+		<rect x="27.35" y="49.871" width="14.146" height="4.275"/>
+		<polygon points="29.634,53.238 28.329,51.957 29.634,50.676 		"/>
+		<polygon points="38.939,50.676 40.243,51.957 38.939,53.238 		"/>
+		<rect x="32.286" y="44.936" width="4.274" height="14.147"/>
+		<polygon points="33.193,47.219 34.475,45.915 35.756,47.219 		"/>
+		<polygon points="35.756,56.525 34.475,57.83 33.193,56.525 		"/>
+	</g>
+	<g>
+		<g>
+			<rect x="26.35" y="48.871" fill="#546E7A" width="14.146" height="4.275"/>
+			<polygon fill="#36474F" points="28.634,52.238 27.329,50.957 28.634,49.676 			"/>
+			<polygon fill="#36474F" points="37.939,49.676 39.243,50.957 37.939,52.238 			"/>
+			<rect x="31.286" y="43.936" fill="#546E7A" width="4.274" height="14.147"/>
+			<polygon fill="#36474F" points="32.193,46.219 33.475,44.915 34.756,46.219 			"/>
+			<polygon fill="#36474F" points="34.756,55.525 33.475,56.83 32.193,55.525 			"/>
+		</g>
+	</g>
+</g>
+<g>
+	<g opacity="0.1">
+		<circle fill="#740022" cx="61.664" cy="52.288" r="3.992"/>
+	</g>
+	<g>
+		<circle fill="#F32FA1" cx="60.664" cy="51.288" r="3.992"/>
+	</g>
+</g>
+<g>
+	<g opacity="0.1">
+		<circle fill="#740022" cx="71.608" cy="52.288" r="3.992"/>
+	</g>
+	<g>
+		<circle fill="#F32FA1" cx="70.608" cy="51.288" r="3.992"/>
+	</g>
+</g>
+</svg>

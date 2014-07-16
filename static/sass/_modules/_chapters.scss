@@ -1,0 +1,412 @@
+// Chapter UI
+
+.chapter__close {
+  position: absolute;
+  top: 50%;
+  @include translateY(-50%);
+  right: 7px;
+  width: 48px;
+  height: 48px;
+  opacity: 0.5;
+  cursor: pointer;
+  background-position: 50% 50%;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-image: inline-image('chapter-icons/icon-close-white.svg');
+  @include small-and-nexus-only {
+    right: 0;
+  }
+  &:hover {
+    opacity: 0.70;
+  }
+}
+
+.chapter__more {
+  position: absolute;
+  top: 50%;
+  @include translateY(-50%);
+  right: 10px;
+  width: 48px;
+  height: 48px;
+  opacity: 0.25;
+  cursor: pointer;
+  background-position: 50% 50%;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-image: inline-image('chapter-icons/icon-info-black.svg');
+  @include small-and-nexus-only {
+    right: 2px;
+  }
+  &:hover {
+    opacity: 0.60;
+  }
+}
+
+.chapters {
+  // display: none;
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  z-index: 10000;
+  @include transform(translate3d(0, -100%, 0) scale3d(1, 1, 1));
+  @include transform-origin(100% 100%, false);
+  // @include transition(600ms min-height ease-in-out);
+
+  @include border-radius(3px);
+  @include box-shadow(0 1px 7px rgba(#000, 0.06), 0 1px 5px rgba(#000, 0.12));
+
+  overflow: hidden;
+  width: 320px;
+  height: 0;
+
+  &.first {
+    z-index: 1000;
+    bottom: 24px;
+    right: 24px;
+
+    @include small-and-nexus-only {
+      top: auto !important;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  @include small-and-nexus-only {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    @include transform(translate3d(0, 0, 0) scale3d(1, 1, 1));
+    @include transform-origin(50% 100%, false);
+    @include border-radius(0);
+  }
+}
+
+// Individual chapters
+.chapters__chapter {
+  width: 320px;
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  @include transform(translate3d(0, 0, 0) scale3d(1, 1, 1));
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &.hidden-chapter {
+    @include translateX(100%);
+    visibility: hidden;
+  }
+
+  @include small-and-nexus-only {
+    height: 100%;
+    width: 100%;
+  }
+
+  &.-exoplanet {
+    background: #6d41ba;
+  }
+
+  &.-planet {
+    background: #9c26b0;
+  }
+
+  &.-neural {
+    background: #03a9f4;
+  }
+
+  &.-boson {
+    background: #0097a7;
+  }
+
+  &.-silicon {
+    background: #3e51b5;
+  }
+
+  &.-white {
+    background: #ffffff;
+
+    @include small-and-nexus-only {
+      position: relative;
+      height: auto;
+      border-bottom: 56px solid #f6f6f6;
+    }
+  }
+
+  .chapter__pause {
+    padding: 0 0 0 50px;
+    border-top: 1px solid #ececec;
+    @include small-and-nexus-only {
+      display: none;
+    }
+    svg {
+      left: 18px;
+    }
+  }
+}
+
+.chapter__controls {
+  height: 64px;
+  background-color: rgba(#bbbbbb, 0);
+  position: relative;
+  @include small-and-nexus-only {
+    height: 50px;
+  }
+}
+
+.chapter__title {
+  height: 72px;
+  position: relative;
+
+  h5 {
+    color: white;
+    font-size: 26px;
+    line-height: 32px;
+    margin: 0;
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    right: 24px;
+    font-weight: 400;
+    @include translateY(-50%);
+    @include small-and-nexus-only {
+      left: 16px;
+      right: 16px;
+    }
+  }
+
+    .chapter__icon {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      @include translateY(-50%);
+      width: 40px;
+      height: 40px;
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 40px 40px;
+    }
+
+  .-boson & .chapter__icon {
+    background-image: inline-image('chapter-icons/chapter-icon-boson.svg');
+  }
+
+  .-silicon & .chapter__icon {
+    background-image: inline-image('chapter-icons/chapter-icon-silicon.svg');
+  }
+
+  .-neural & .chapter__icon {
+    background-image: inline-image('chapter-icons/chapter-icon-neural-network.svg');
+  }
+
+  .-planet & .chapter__icon {
+    background-image: inline-image('chapter-icons/chapter-icon-connected-world.svg');
+  }
+
+  .-exoplanet & .chapter__icon {
+    background-image: inline-image('chapter-icons/chapter-icon-exoplanets.svg');
+  }
+}
+
+.chapter__description {
+  @extend %white-antialiased;
+
+  padding: 8px 24px 24px 24px;
+
+  @include small-and-nexus-only {
+    padding: 8px 16px 16px 16px;
+  }
+
+  .-white & {
+    color: #4c4c4c;
+    -webkit-font-smoothing: auto;
+    padding-top: 0;
+  }
+}
+
+.chapter__scale-wrapper {
+  padding: 0 24px 0 24px;
+  border-top: 1px solid rgba(white, 0.1);
+  position: relative;
+  height: 120px;
+
+  @include small-and-nexus-only {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.chapter__scale {
+  width: 272px;
+  position: absolute;
+  left: 50%;
+  @include translateX(-50%);
+  .chapter__scale-name {
+    font-size: 10px;
+    line-height: 16px;
+    height: 112px;
+    padding-top: 88px;
+    background-position: 0 50%;
+    background-size: 272px 52px;
+    background-repeat: no-repeat;
+    background-image: inline-image('chapter-icons/progress.svg');
+    @extend %white-antialiased;
+    text-indent: 0;
+
+    .-boson & {
+      text-indent: 0;
+    }
+
+    .-silicon & {
+      text-indent: 25px;
+    }
+
+    .-neural & {
+      text-indent: 74px;
+    }
+
+    .-planet & {
+      text-indent: 144px;
+    }
+
+    .-exoplanet & {
+      text-indent: 222px;
+    }
+  }
+}
+
+.chapter__scale-active {
+  background: white;
+  @include border-radius(50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  @include transform(translateY(-50%));
+}
+
+.chapter__scale-boson-active {
+  width: 6px;
+  height: 6px;
+  left: 1px;
+
+  .-boson & {
+    background-color: #eeff41;
+  }
+}
+
+.chapter__scale-silicon-active {
+  width: 8px;
+  height: 8px;
+  left: 44px;
+
+  .-silicon & {
+    background-color: #ff4081;
+  }
+}
+
+.chapter__scale-neural-active {
+  width: 12px;
+  height: 12px;
+  left: 92px;
+
+  .-neural & {
+    background-color: #18ffff;
+  }
+}
+
+.chapter__scale-planet-active {
+  width: 30px;
+  height: 30px;
+  left: 147px;
+
+  .-planet & {
+    background-color: #ff5252;
+  }
+}
+
+.chapter__scale-exoplanet-active {
+  width: 54px;
+  height: 54px;
+  left: 220px;
+
+  .-exoplanet & {
+    background-color: #18ffff;
+  }
+}
+
+#radius {
+  @include border-radius(50%);
+  background-color: #F0FAFF;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include transform(translateX(-50%) translateY(-50%) scale(0));
+  // @include transition(background-color 100ms linear);
+
+  .hover-circle & {
+    background-color: #E1F5FF;
+    cursor: pointer;
+  }
+
+  @include small-and-nexus-only {
+    display: none;
+  }
+}
+
+.play-button {
+  width: 56px;
+  height: 56px;
+  background-color: #81D4FA;
+  @include border-radius(50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  cursor: pointer;
+
+  background-position: 50% 50%;
+  background-size: 24px 24px;
+  background-repeat: no-repeat;
+  background-image: inline-image('chapter-icons/icon-arrow-right-white.svg');
+
+  &.-desktop {
+    @include transform(translate3d(0, 0, 0));
+    z-index: 10000;
+    .hover-circle & {
+      background-color: #4FC0FF;
+    }
+    @include small-and-nexus-only {
+      display: none;
+    }
+  }
+}
+
+.chapters__chapter.-intro {
+  .chapter__description {
+    padding-right: 52px;
+    padding-top: 0;
+    margin-top: -24px;
+    @include small-and-nexus-only {
+      padding-right: 80px;
+      margin-top: 0;
+    }
+    .nexus-7 & {
+      max-width: 500px;
+    }
+  }
+
+  .play-button {
+    display: none;
+
+    @include small-and-nexus-only {
+      top: auto;
+      left: auto;
+      right: 16px;
+      bottom: 16px;
+      display: block;
+    }
+  }
+}
