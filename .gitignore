@@ -1,0 +1,10 @@
+node_modules/
+/static/js/site.js
+/static/js/experiment.js
+/static/js/experiment.combo.js
+/static/js/experiment.clean.js
+.DS_Store
+.ruby-version
+/static/js/experiment-deps.js
+/static/js/experiment/svgs.js
+.sass-cache
